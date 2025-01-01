@@ -78,9 +78,19 @@ body {
   background: #11a728;
 }
 
+.clickable-wrap {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 h2 {
   position: absolute;
-  bottom: 350px;
   color: #252525;
   font-size: 2em;
   transition: 0.5s;
@@ -110,7 +120,6 @@ h2.active::after {
 
 .fa-hand-pointer {
   position: absolute;
-  bottom: 35vh;
   animation: slide-animation 3s infinite;
   font-size: 30px;
   transform: rotate(-0.07turn);
@@ -124,15 +133,15 @@ h2.active+.fa-hand-pointer {
 @keyframes slide-animation {
   0% {
     left: 100%;
-    bottom: 25vh;
+    top: 7vh;
   }
   60% {
-    left: 60%;
-    bottom: 33vh;
+    left: 55%;
+    top: 1vh;
   }
   100% {
-    left: 60%;
-    bottom: 33vh;
+    left: 55%;
+    top: 1vh;
   }
 }
 
