@@ -85,6 +85,7 @@ h2 {
   font-size: 2em;
   transition: 0.5s;
   cursor: pointer;
+  animation: slide-animation-sync 3s infinite;
 }
 
 h2.active {
@@ -92,6 +93,7 @@ h2.active {
   text-shadow:
           0 0 20px #fff,
           0 0 50px #fff;
+  animation: none;
 }
 
 h2:after {
@@ -104,6 +106,57 @@ h2.active::after {
   text-shadow:
           0 0 20px #32ed4e,
           0 0 50px #32ed4e;
+}
+
+.fa-hand-pointer {
+  position: absolute;
+  bottom: 35vh;
+  animation: slide-animation 3s infinite;
+  font-size: 30px;
+  transform: rotate(-0.07turn);
+  color: #fff;
+}
+
+h2.active+.fa-hand-pointer {
+  display: none;
+}
+
+@keyframes slide-animation {
+  0% {
+    left: 100%;
+    bottom: 25vh;
+  }
+  60% {
+    left: 60%;
+    bottom: 33vh;
+  }
+  100% {
+    left: 60%;
+    bottom: 33vh;
+  }
+}
+
+@keyframes slide-animation-sync {
+  0% {
+  }
+  63% {
+    transform: scale(1);
+  }
+  64% {
+    transform: scale(1.06);
+  }
+  74% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.06);
+  }
+  85% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .glowing {
