@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3Dカード | あっと夫婦</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="animation-area">
+<div>
+  <ul class="box-area">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <div class="container">
+    <div class="card dragonballz">
+      <div class="character">
+        <img src="img/goku.png" alt="image">
+      </div>
+      <div class="character">
+        <img src="img/dragonballz.png" alt="image" style="width: 100%;" class="zoom-in-zoom-out">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card onepiece">
+      <div class="character">
+        <img src="img/luffy.png" alt="image">
+      </div>
+      <div class="character">
+        <img src="img/onepiece.png" alt="image" style="width: 100%;" class="zoom-in-zoom-out">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card kimetsunoyaiba">
+      <div class="character">
+        <img src="img/tanjirou.png" alt="image">
+      </div>
+      <div class="character">
+        <img src="img/kimetsunoyaiba.png" alt="image" style="width: 40%;" class="zoom-in-zoom-out">
+      </div>
+    </div>
+  </div>
+  <ul class="box-area">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <div class="spacer"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+  jQuery(document).ready(function ($) {
+    $(".container").each(function () {
+      var $container = $(this);
+      var $card = $container.find(".card");
+      var character = $container.find(".character img");
+      var $purchase = $container.find(".purchase");
+
+      $container.on("mousemove", function (e) {
+        let xAxis = (window.innerWidth / 2 - e.clientX) / 25;
+        let yAxis = (window.innerHeight / 2 - e.clientY) / 25;
+        $card.css("transform", `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`);
+      });
+
+      $container.hover(function () {
+        $card.toggleClass("has-transform");
+        character.toggleClass("has-transform");
+        $purchase.toggleClass("has-transform");
+      });
+
+      $container.on("mouseleave", function () {
+        $card.css("transform", `rotateY(0deg) rotateX(0deg)`);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
