@@ -22,7 +22,7 @@ body {
   transition: all 0.75s ease-out;
   -webkit-perspective: 1000px;
   perspective: 1000px;
-  margin: 0 auto 5vh;
+  margin: 0 auto 15vh;
   height: 100%;
   z-index: 999;
 }
