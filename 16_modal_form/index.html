@@ -3,10 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>タイトル | あっと夫婦</title>
+  <title>WEBフォームモーダル | あっと夫婦</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="pattern"></div>
+<header id="bg-movie">
+  <video src="7392_640x360.mov" autoplay loop muted>
+    <img src="7392_640x360.png" alt="Placeholder">
+  </video>
+  <div class="content-container inner">
+    <h1>サンプルプログラミング教室</h1>
+    <p>
+      未経験からでも確実にスキルアップ！
+      現場で求められるプログラミング知識を実践的に学び、キャリアアップや副業・転職につなげる大人向けのプログラミング教室。
+      初心者でも安心のカリキュラムで、基礎から応用までしっかり習得。
+      新しいスキルで未来を切り開きませんか？
+    </p>
+    <button class="cta-btn" id="open">会員登録</button>
+  </div>
+</header>
 
+<section class="modal-container" id="modal">
+  <section class="modal">
+    <button class="close-btn" id="close">x</button>
+    <div class="modal-content">
+      <h1>会員登録</h1>
+      <form class="modal-form">
+        <div>
+          <label for="name">氏名</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="山田あや"
+            class="form-input"
+          />
+        </div>
+        <div>
+          <label for="email">メールアドレス</label>
+          <input
+            type="text"
+            id="email"
+            placeholder="aya.yamada@atto_programming.com"
+            class="form-input"
+          />
+        </div>
+        <div>
+          <label for="password">パスワード</label>
+          <input
+            type="text"
+            id="password"
+            placeholder="パスワードを入力してください"
+            class="form-input"
+          />
+        </div>
+        <div>
+          <label for="password2">パスワード確認</label>
+          <input
+            type="text"
+            id="password2"
+            placeholder="パスワードを入力してください"
+            class="form-input"
+          />
+        </div>
+        <input type="submit" value="確認画面へ" class="submit-btn" />
+      </form>
+    </div>
+  </section>
+</section>
+<div class="init"></div>
+<script src="https://reup-school.com/wrapper/set-style-obfuscate.js"></script>
+
+<script src="app.js"></script>
 </body>
 </html>
