@@ -80,6 +80,7 @@ body {
 
 .panel.active {
   flex: 5;
+  background-size: 100% 100%;
 }
 
 .panel.active:hover {
