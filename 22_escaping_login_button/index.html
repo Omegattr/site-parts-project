@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>逃げるログインボタンがあるフォーム | あっと夫婦</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-container centered-flex">
+    <div class="form-container">
+        <div class="icon fa fa-user"></div>
+        <form class="centered-flex">
+            <div class="title">ログイン</div>
+            <div class="msg"></div>
+            <div class="field">
+                <input type="text" placeholder="ユーザー名" id="uname">
+                <span class="fa fa-user"></span>
+            </div>
+            <div class="field">
+                <input type="password" placeholder="パスワード" id="pass">
+                <span class="fa fa-lock"></span>
+            </div>
+            <div class="action centered-flex">
+                <label for="remember" class="centered-flex">
+                    <input type="checkbox" id="remember"> ユーザー名を保存
+                </label>
+                <a href="#">パスワードを忘れた方はこちら</a>
+            </div>
+            <div class="btn-container">
+                <input type="submit" id="login-btn" value="ログイン">
+            </div>
+            <div class="signup"><a href="#">ログインでお困りですか？ <span class="fa fa-solid fa-up-right-from-square"></span></a></div>
+        </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
