@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サクッと年齢チェック | あっと夫婦</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <form>
+      <div class="base">
+        <div class="top-enter">
+          <h4>サクッと年齢チェック！</h4>
+          <p class="text">あれ、私って何歳何ヶ月何日だっけ？？<br>誕生日を入力してみよう。</p>
+        </div>
+        <div class="block">
+          <p class="title">年</p>
+          <input type="text" name="year" id="year" placeholder="1982" required="required" minlength="4" maxlength="4" />
+        </div>
+        <div class="block">
+          <p class="title">月</p>
+          <input type="text" name="month" id="month" placeholder="4" required="required" minlength="1" maxlength="2" />
+        </div>
+        <div class="block">
+          <p class="title">日</p>
+          <input type="text" name="date" id="date" placeholder="5" required="required" minlength="1" maxlength="2" />
+        </div>
+      </div>
+      <div class="base">
+        <div class="enter">
+          <input type="button" name="submit" value="調べる" onclick="age()" />
+        </div>
+      </div>
+      <div id="age"></div>
+    </form>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
