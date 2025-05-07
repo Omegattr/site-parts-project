@@ -1,0 +1,4 @@
+タイトル: ****
+
+# Auto-Type-Code Docs
+https://marketplace.visualstudio.com/items?itemName=WebCrafter.auto-type-code
