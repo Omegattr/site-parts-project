@@ -178,8 +178,6 @@ body {
 }
 
 .link:hover {
-  /* opacity: 0.8;
-  color: blueviolet; */
   color: transparent;        /* テキストノードを透明に */
   transition: color 0.3s;
   transform: translateX(-20px);
