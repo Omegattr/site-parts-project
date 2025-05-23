@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-image: linear-gradient(#22212c, #22212c, #22212c);
+  overflow: hidden;
+  font-family: 'Montserrat';
+  color: #fff;
+}
+.carousel {
+  transform: perspective(1000px) rotateX(70deg);
+  transform-style: preserve-3d;
+  display: grid;
+  place-items: center;
+  animation: rotate 15s linear infinite;
+  transition: all 1s;
+  background-image: radial-gradient(circle at 50% 50%, #222 30%, transparent 40%);
+}
+.carousel:hover {
+  animation-play-state: paused;
+}
+.carousel .cardb {
+  display: grid;
+  place-items: center;
+  width: 190px;
+  height: 225px;
+  background-color: #1f1f1f;
+  position: absolute;
+  border-radius: 5px;
+}
+.carousel .card {
+  display: grid;
+  place-items: center;
+  width: 190px;
+  height: 225px;
+  background-color: #333;
+  position: absolute;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  border-radius: 5px;
+  -webkit-box-reflect: below 3px linear-gradient(transparent 75%, rgba(255,255,255,0.125));
+}
+.carousel .card .img {
+  width: 180px;
+  height: 100px;
+  border-radius: 3px;
+  margin-bottom: -10px;
+  filter: brightness(0.7);
+}
+.carousel .card p {
+  font-size: 16px;
+  margin-bottom: -5px;
+}
+.carousel .card span {
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+}
+.c1 {
+  padding: 0;
+  transform-origin: center center;
+  transform: rotateZ(45deg) rotateX(90deg) translateY(120px) translateZ(280px) rotateZ(180deg);
+}
+.c1 .img {
+  background-image: url("https://picsum.photos/300/300.webp?random=1");
+  background-size: 190px 190px;
+}
+.cb1 {
+  padding: 0;
+  transform-origin: center center;
+  transform: rotateZ(45deg) rotateX(90deg) translateY(120px) translateZ(279px);
+}
+.c2 {
+  padding: 0;
+  transform-origin: center center;
+  transform: rotateZ(90deg) rotateX(90deg) translateY(120px) translateZ(280px) rotateZ(180deg);
+}
+.c2 .img {
+  background-image: url("https://picsum.photos/300/300.webp?random=2");
+  background-size: 190px 190px;
+}
+.cb2 {
+  padding: 0;
+  transform-origin: center center;
+  transform: rotateZ(90deg) rotateX(90deg) translateY(120px) translateZ(279px);
+}
+.c3 {
+  padding: 0;
+  transform-origin: center center;
+  transform: rotateZ(135deg) rotateX(90deg) translateY(120px) translateZ(280px) rotateZ(180deg);
+}
+.c3 .img {
+  background-image: url("https://picsum.photos/300/300.webp?random=3");
+  background-size: 190px 190px;
+}
+.cb3 {
+  padding: 0;
+  transform-origin: center center;
+  transform: rotateZ(135deg) rotateX(90deg) translateY(120px) translateZ(279px);
+}
+.c4 {
+  padding: 0;
+  transform-origin: center center;
+  transform: rotateZ(180deg) rotateX(90deg) translateY(120px) translateZ(280px) rotateZ(180deg);
+}
+.c4 .img {
+  background-image: url("https://picsum.photos/300/300.webp?random=4");
+  background-size: 190px 190px;
+}
+.cb4 {
+  padding: 0;
+  transform-origin: center center;
+  transform: rotateZ(180deg) rotateX(90deg) translateY(120px) translateZ(279px);
+}
+.c5 {
+  padding: 0;
+  transform-origin: center center;
+  transform: rotateZ(225deg) rotateX(90deg) translateY(120px) translateZ(280px) rotateZ(180deg);
+}
+.c5 .img {
+  background-image: url("https://picsum.photos/300/300.webp?random=5");
+  background-size: 190px 190px;
+}
+.cb5 {
+  padding: 0;
+  transform-origin: center center;
+  transform: rotateZ(225deg) rotateX(90deg) translateY(120px) translateZ(279px);
+}
+.c6 {
+  padding: 0;
+  transform-origin: center center;
+  transform: rotateZ(270deg) rotateX(90deg) translateY(120px) translateZ(280px) rotateZ(180deg);
+}
+.c6 .img {
+  background-image: url("https://picsum.photos/300/300.webp?random=6");
+  background-size: 190px 190px;
+}
+.cb6 {
+  padding: 0;
+  transform-origin: center center;
+  transform: rotateZ(270deg) rotateX(90deg) translateY(120px) translateZ(279px);
+}
+.c7 {
+  padding: 0;
+  transform-origin: center center;
+  transform: rotateZ(315deg) rotateX(90deg) translateY(120px) translateZ(280px) rotateZ(180deg);
+}
+.c7 .img {
+  background-image: url("https://picsum.photos/300/300.webp?random=7");
+  background-size: 190px 190px;
+}
+.cb7 {
+  padding: 0;
+  transform-origin: center center;
+  transform: rotateZ(315deg) rotateX(90deg) translateY(120px) translateZ(279px);
+}
+.c8 {
+  padding: 0;
+  transform-origin: center center;
+  transform: rotateZ(360deg) rotateX(90deg) translateY(120px) translateZ(280px) rotateZ(180deg);
+}
+.c8 .img {
+  background-image: url("https://picsum.photos/300/300.webp?random=8");
+  background-size: 190px 190px;
+}
+.cb8 {
+  padding: 0;
+  transform-origin: center center;
+  transform: rotateZ(360deg) rotateX(90deg) translateY(120px) translateZ(279px);
+}
+@media screen and (max-width: 992px) {
+  .carousel {
+    scale: 0.7;
+  }
+}
+@-moz-keyframes rotate {
+  to {
+    transform: perspective(1000px) rotateX(70deg) rotateZ(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  to {
+    transform: perspective(1000px) rotateX(70deg) rotateZ(360deg);
+  }
+}
+@-o-keyframes rotate {
+  to {
+    transform: perspective(1000px) rotateX(70deg) rotateZ(360deg);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: perspective(1000px) rotateX(70deg) rotateZ(360deg);
+  }
+}

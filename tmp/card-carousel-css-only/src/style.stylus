@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body
+	display grid
+	place-items center
+	height 100vh
+	background-image linear-gradient(#111,#222,#111)
+	overflow hidden
+	font-family 'Montserrat'
+	color #fff
+	
+.carousel
+	transform perspective(1000px) rotateX(70deg)
+	transform-style: preserve-3d;
+	display grid
+	place-items center
+	animation rotate 15s linear infinite
+	transition all 1s
+	background-image radial-gradient(circle at 50% 50%,#222 30%,transparent 40%)
+
+	&:hover
+		animation-play-state paused
+	.cardb
+		display grid
+		place-items center
+		width 190px
+		height 225px
+		background-color #1f1f1f
+		position absolute
+		border-radius 5px
+	.card
+		display grid
+		place-items center
+		width 190px
+		height 225px
+		background-color #333
+		position absolute
+		box-shadow 0 0 20px rgba(0,0,0,.5)
+		border-radius 5px
+		-webkit-box-reflect below 3px linear-gradient(transparent 75%, rgba(255,255,255,.125))
+		.img
+			width 180px
+			height 100px
+			border-radius 3px
+			margin-bottom -10px
+			filter brightness(.7)
+		p
+			font-size 16px
+			margin-bottom -5px
+		span
+			font-size 12px
+			text-align center
+			padding 8px
+for i in 1..8
+	.c{i}
+		padding 0
+		transform-origin center center
+		transform rotateZ(360deg/8*i) rotateX(90deg) translateY(120px) translateZ(280px) rotateZ(180deg)
+		.img
+			background-image url('https://picsum.photos/300/300.webp?random='+i)
+			background-size 190px 190px
+	.cb{i}
+		padding 0
+		transform-origin center center
+		transform rotateZ(360deg/8*i) rotateX(90deg) translateY(120px) translateZ(279px)
+		
+@keyframes rotate
+	to
+		transform perspective(1000px) rotateX(70deg) rotateZ(360deg)
+		
+		
+@media screen and (max-width: 992px)
+	.carousel
+		scale .7
