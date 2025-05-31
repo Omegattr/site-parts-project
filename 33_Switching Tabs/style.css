@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --html-gradient-start: #ff7e5f;
+  --html-gradient-end: #feb47b;
+  --css-gradient-start: #4facfe;
+  --css-gradient-end: #00f2fe;
+  --js-gradient-start: #f6d365;
+  --js-gradient-end: #fda085;
+  --react-gradient-start: #d4b3ff;
+  --react-gradient-end: #e6b3ff;
+  --node-gradient-start: #4a9d8f;
+  --node-gradient-end: #7dc8a3;
+  --text-color: #1f2937;
+  --bg-color: #f9fafb;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, var(--html-gradient-start), var(--html-gradient-end));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  overflow-x: hidden;
+  transition: var(--transition);
+}
+
+/* 背景の文字アニメーション */
+body::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 50%);
+  animation: rotate 30s linear infinite;
+  z-index: 0;
+}
+
+/* HTMLの背景アニメーション */
+body.item1-bg::after {
+  content: 'HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML\A'
+    'HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML\A'
+    'HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML\A'
+    'HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML\A'
+    'HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML\A'
+    'HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML\A'
+    'HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML HTML';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 95vh;
+  font-size: 200px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.07);
+  white-space: pre;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-45deg);
+  overflow: hidden;
+}
+
+/* CSSの背景アニメーション */
+body.item2-bg::after {
+  content: 'CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS\A'
+    'CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS\A'
+    'CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS\A'
+    'CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS\A'
+    'CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS\A'
+    'CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS\A'
+    'CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS CSS';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 95vh;
+  font-size: 200px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.07);
+  white-space: pre;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-45deg);
+  overflow: hidden;
+}
+
+/* JavaScriptの背景アニメーション */
+body.item3-bg::after {
+  content: 'JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript\A'
+    'JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript\A'
+    'JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript\A'
+    'JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript\A'
+    'JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript\A'
+    'JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript\A'
+    'JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 95vh;
+  font-size: 200px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.07);
+  white-space: pre;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-45deg);
+  overflow: hidden;
+}
+
+/* Reactの背景アニメーション */
+body.item4-bg::after {
+  content: 'React React React React React React React React React React React React React\A'
+    'React React React React React React React React React React React React React\A'
+    'React React React React React React React React React React React React React\A'
+    'React React React React React React React React React React React React React\A'
+    'React React React React React React React React React React React React React\A'
+    'React React React React React React React React React React React React React\A'
+    'React React React React React React React React React React React React React';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 95vh;
+  font-size: 200px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.07);
+  white-space: pre;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-45deg);
+  overflow: hidden;
+}
+
+/* Nodeの背景アニメーション */
+body.item5-bg::after {
+  content: 'Node Node Node Node Node Node Node Node Node Node Node Node Node Node Node Node\A'
+    'Node Node Node Node Node Node Node Node Node Node Node Node Node Node Node\A'
+    'Node Node Node Node Node Node Node Node Node Node Node Node Node Node Node\A'
+    'Node Node Node Node Node Node Node Node Node Node Node Node Node Node Node\A'
+    'Node Node Node Node Node Node Node Node Node Node Node Node Node Node Node\A'
+    'Node Node Node Node Node Node Node Node Node Node Node Node Node Node Node\A'
+    'Node Node Node Node Node Node Node Node Node Node Node Node Node Node Node';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 95vh;
+  font-size: 200px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.07);
+  white-space: pre;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-45deg);
+  overflow: hidden;
+}
+
+
+/* タブごとの背景色クラス */
+body.item1-bg {
+  background: linear-gradient(135deg, var(--html-gradient-start), var(--html-gradient-end));
+}
+
+body.item2-bg {
+  background: linear-gradient(135deg, var(--css-gradient-start), var(--css-gradient-end));
+}
+
+body.item3-bg {
+  background: linear-gradient(135deg, var(--js-gradient-start), var(--js-gradient-end));
+}
+
+body.item4-bg {
+  background: linear-gradient(135deg, var(--react-gradient-start), var(--react-gradient-end));
+}
+
+body.item5-bg {
+  background: linear-gradient(135deg, var(--node-gradient-start), var(--node-gradient-end));
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  position: relative;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 2px solid rgba(229, 231, 235, 0.5);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+
+.tab-item {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+.tab-item a[href="#item1"] {
+  --gradient-start: var(--html-gradient-start);
+  --gradient-end: var(--html-gradient-end);
+  color: #e34c26;
+}
+
+.tab-item a[href="#item2"] {
+  --gradient-start: var(--css-gradient-start);
+  --gradient-end: var(--css-gradient-end);
+  color: #267ce4;
+}
+
+.tab-item a[href="#item3"] {
+  --gradient-start: var(--js-gradient-start);
+  --gradient-end: var(--js-gradient-end);
+  color: #f7df1e;
+}
+
+.tab-item a[href="#item4"] {
+  --gradient-start: var(--react-gradient-start);
+  --gradient-end: var(--react-gradient-end);
+  color: #7741e9;
+}
+
+.tab-item a[href="#item5"] {
+  --gradient-start: var(--node-gradient-start);
+  --gradient-end: var(--node-gradient-end);
+  color: #339933;
+}
+
+.tab-item a {
+  display: block;
+  padding: 0.75rem 0.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: 2px solid transparent;
+}
+
+.tab-item a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  opacity: 0;
+  transition: var(--transition);
+  z-index: -1;
+}
+
+.tab-item a:hover {
+  transform: translateY(-2px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-color: var(--gradient-start);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  filter: brightness(1.1);
+}
+
+.tab-item a:hover::before {
+  opacity: 0.15;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.tab-item a.active {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-color: transparent;
+}
+
+.tab-content {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: var(--transition);
+  display: none;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tab-content h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  transition: var(--transition);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+/* タブ選択時のh1タグの色を設定 */
+body.item1-bg .tab-content h1 {
+  background: linear-gradient(135deg, var(--html-gradient-start), var(--html-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.item2-bg .tab-content h1 {
+  background: linear-gradient(135deg, var(--css-gradient-start), var(--css-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.item3-bg .tab-content h1 {
+  background: linear-gradient(135deg, var(--js-gradient-start), var(--js-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.item4-bg .tab-content h1 {
+  background: linear-gradient(135deg, var(--react-gradient-start), var(--react-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.item5-bg .tab-content h1 {
+  background: linear-gradient(135deg, var(--node-gradient-start), var(--node-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tab-content p {
+  line-height: 1.8;
+  color: #4b5563;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.content-visible {
+  opacity: 1;
+  transform: translateY(0);
+  display: block;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .tabs {
+    gap: 0.5rem;
+  }
+  
+  .tab-item a {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.875rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .tab-content {
+    padding: 1.5rem;
+  }
+}
