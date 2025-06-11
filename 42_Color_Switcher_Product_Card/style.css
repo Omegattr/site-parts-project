@@ -1,0 +1,187 @@
+        /* General Styles */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f6fa;
+            margin: 0;
+            color: #2f3542;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        /* Product Card */
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Product Images Container */
+        .product-images {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Product Images */
+        .product-images img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Show Active Image */
+        .product-images img.active {
+            opacity: 1;
+        }
+
+        /* Product Title */
+        .product-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 20px 0 10px;
+            color: #2f3542;
+        }
+
+        /* Product Price */
+        .product-price {
+            font-size: 24px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Color Options */
+        .color-options {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        /* Color Option Styling */
+        .color-option {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 3px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+
+        /* 選択中の色オプションのスタイル */
+        .color-option input[type="radio"]:checked + label {
+            transform: scale(1.2);
+            box-shadow: 0 0 0 3px #fff, 0 0 0 6px #3498db;
+        }
+
+        /* Color Labels */
+        .color-option label {
+            display: block;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Color Styles */
+        .color-option.purple label {
+            background-color: #9b59b6;
+        }
+
+        .color-option.green label {
+            background-color: #2ecc71;
+        }
+
+        .color-option.black label {
+            background-color: #34495e;
+        }
+
+        /* 選択中の色オプションのラベル */
+        .color-option input[type="radio"]:checked + label::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Glowing Button */
+        .add-to-cart {
+            background-color: #3498db;
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        /* Glow Effect */
+        .add-to-cart::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 70%);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s ease;
+            border-radius: 50%;
+        }
+
+        /* Hover Effects */
+        .add-to-cart:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+        }
+
+        .add-to-cart:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* Active State */
+        .add-to-cart:active {
+            transform: translateY(0);
+        }

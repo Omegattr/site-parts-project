@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color_Switcher_Product_Card | あっと夫婦</title>
+    <!-- link CSS file to HTML file -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="product-card">
+        <!-- Color Options -->
+        <div class="color-options">
+           <label for="">カラー選択 : </label>
+            <div class="color-option purple">
+                <input type="radio" id="color-purple" name="color" value="purple" checked>
+                <label for="color-purple"></label>
+            </div>
+            <div class="color-option green">
+                <input type="radio" id="color-green" name="color" value="green">
+                <label for="color-green"></label>
+            </div>
+            <div class="color-option black">
+                <input type="radio" id="color-black" name="color" value="black">
+                <label for="color-black"></label>
+            </div>
+        </div>
+
+        <!-- Product Images -->
+        <div class="product-images">
+            <img src="purple.png" alt="パープルカラーの商品" class="purple active">
+            <img src="green.png" alt="グリーンカラーの商品" class="green">
+            <img src="black.png" alt="ブラックカラーの商品" class="black">
+        </div>
+
+        <!-- Product Details -->
+        <div class="product-title">プレミアムスポーツシューズ</div>
+        <div class="product-price">¥12,800</div>
+        <button class="add-to-cart">カートに追加する</button>
+    </div>
+
+    <!-- link JavaScript file to HTML file -->
+    <script src="script.js"></script>
+
+</body>
+</html> 
