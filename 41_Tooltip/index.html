@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooltip Examples</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Tooltip Examples</h1>
+        <p class="subtitle">シンプルで使いやすいツールチップの実装例</p>
+      </header>
+
+      <main>
+        <section class="example-section">
+          <h2>基本的な使い方</h2>
+          <div class="example-grid">
+            <div class="example-card">
+              <h3>テキストツールチップ</h3>
+              <div class="example-content">
+                <button class="example-btn" data-tooltip="これは基本的なテキストツールチップです">
+                  ホバーしてください
+                </button>
+              </div>
+            </div>
+
+            <div class="example-card">
+              <h3>アイコンツールチップ</h3>
+              <div class="example-content">
+                <button class="icon-btn" data-tooltip="設定を開く">
+                  <i class="fas fa-cog"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="example-card">
+              <h3>ヘルプツールチップ</h3>
+              <div class="example-content">
+                <span class="help-text">KPI</span>
+                <span class="help-icon" data-tooltip="Key Performance Indicator（重要業績評価指標）の略称です">?</span>
+              </div>
+            </div>
+
+            <div class="example-card">
+              <h3>フォームツールチップ</h3>
+              <div class="example-content">
+                <div class="form-group">
+                  <label>メールアドレス</label>
+                  <div class="input-group">
+                    <input type="email" placeholder="example@email.com">
+                    <span class="help-icon" data-tooltip="この情報は公開されません">?</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="code-section">
+          <h2>実装方法</h2>
+          <div class="code-block">
+            <pre><code>/* HTML */
+&lt;button data-tooltip="ツールチップのテキスト"&gt;
+    ホバーしてください
+&lt;/button&gt;
+
+/* CSS */
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 1rem;
+    background: #1e293b;
+    color: white;
+    font-size: 0.875rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+[data-tooltip]:hover:before {
+    visibility: visible;
+    opacity: 1;
+}</code></pre>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
