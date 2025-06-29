@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja" >
+<head>
+  <meta charset="UTF-8">
+  <title>Plan_selection_component | あっと夫婦</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- 料金プラン選択コンポーネント -->
+<div class="container">
+        <div class="inner_container">
+            <div class="btn">
+                <span class="active_bg" style="left: 8px;"></span>
+                <span class="pricing_btn monthly active" data-class="pricing1">月額</span>
+                <span class="pricing_btn yearly" data-class="pricing2">年額</span>
+            </div>
+            <div class="pricing pricing1 active">
+                <div class="payment monthly active">
+                    <div class="free">
+                        <h2>無料</h2>
+                        <span class="money">¥0 <span>/月</span></span>
+                    </div>
+                    <span class="select_icon monthly_icon active"></span>
+                </div>
+                <div class="payment monthly">
+                    <div class="free">
+                        <h2>スターター <span>人気</span></h2>
+                        <span class="money">¥1,100 <span>/月</span></span>
+                    </div>
+                    <span class="select_icon monthly_icon"></span>
+                </div>
+                <div class="payment monthly">
+                    <div class="free">
+                        <h2>プロ</h2>
+                        <span class="money">¥1,700 <span>/月</span></span>
+                    </div>
+                    <span class="select_icon monthly_icon "></span>
+                </div>
+            </div>
+            <div class="pricing pricing2">
+                <div class="payment yearly active">
+                    <div class="free">
+                        <h2>無料</h2>
+                        <span class="money">¥0 <span>/年</span></span>
+                        <div class="yearly-details">
+                            <span class="monthly-equivalent">月額換算: ¥0</span>
+                            <span class="discount-rate">割引率: 0%</span>
+                        </div>
+                    </div>
+                    <span class="select_icon yearly_icon active"></span>
+                </div>
+                <div class="payment yearly">
+                    <div class="free">
+                        <h2>スターター <span>人気</span></h2>
+                        <span class="money">¥10,800 <span>/年</span></span>
+                        <div class="yearly-details">
+                            <span class="monthly-equivalent">月額換算: ¥900</span>
+                            <span class="discount-rate">割引率: 18%</span>
+                        </div>
+                    </div>
+                    <span class="select_icon yearly_icon"></span>
+                </div>
+                <div class="payment yearly">
+                    <div class="free">
+                        <h2>プロ</h2>
+                        <span class="money">¥16,800 <span>/年</span></span>
+                        <div class="yearly-details">
+                            <span class="monthly-equivalent">月額換算: ¥1,400</span>
+                            <span class="discount-rate">割引率: 18%</span>
+                        </div>
+                    </div>
+                    <span class="select_icon yearly_icon"></span>
+                </div>
+            </div>
+            <button class="action_btn">始める</button>
+        </div>
+    </div>
+<!-- スクリプト -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>switching_box | あっと夫婦</title>
+  </head>
+  <body>
+    <!-- ヘッダーセクション -->
+    <header class="site-header">
+      <div class="container">
+        <h1>サイトタイトル</h1>
+        <nav>
+          <ul>
+            <li><a href="#home">ホーム</a></li>
+            <li><a href="#about">会社概要</a></li>
+            <li><a href="#services">サービス</a></li>
+            <li><a href="#testimonials">お客様の声</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+      <!-- ヒーローセクション -->
+      <section id="home" class="hero-section">
+        <div class="container">
+          <h2>素晴らしいサービスを提供します</h2>
+          <p>お客様のニーズに合わせた最適なソリューションをご提案いたします。</p>
+        </div>
+      </section>
+
+      <!-- 会社概要セクション -->
+      <section id="about" class="about-section">
+        <div class="container">
+          <h2>会社概要</h2>
+          <p>私たちは、お客様のビジネスの成功をサポートすることを使命としています。</p>
+        </div>
+      </section>
+
+      <!-- サービスセクション -->
+      <section id="services" class="services-section">
+        <div class="container">
+          <h2>サービス</h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <h3>Webデザイン</h3>
+              <p>美しく使いやすいWebサイトを制作いたします。</p>
+            </div>
+            <div class="service-card">
+              <h3>システム開発</h3>
+              <p>お客様の業務に最適なシステムを開発いたします。</p>
+            </div>
+            <div class="service-card">
+              <h3>コンサルティング</h3>
+              <p>IT戦略の立案から運用までサポートいたします。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 推薦文セクション -->
+      <section id="testimonials" class="testimonials-section">
+        <div class="container">
+          <h2>お客様の声</h2>
+          <p class="section-description">多くのお客様から高い評価をいただいております</p>
+          
+          <!-- 推薦文ボックスコンポーネント -->
+          <div class="testimonial-wrapper">
+            <!-- 背景装飾要素 -->
+            <div class="decoration"></div>
+            <div class="decoration"></div>
+            
+            <div class="testimonial-container">
+              <div class="progress-bar"></div>
+              <div class="fas fa-quote-right fa-quote"></div>
+              <div class="fas fa-quote-left fa-quote"></div>
+              <p class="testimonial">
+                私は文字通り何百人ものHTML/CSS開発者と仕事をしてきましたが、この方に最高の評価を与えざるを得ません。この方は素晴らしい開発者です。良い、クリーンなコードを重視し、細部まで注意を払います。私は、徹底的に考え抜かれたデザインのあらゆる側面を尊重し、それをコードに実装するために最善を尽くす開発者が大好きです。この方は期待を超えて、アートをピクセルに変換します - 毎回、完璧に。
+              </p>
+              <div class="user">
+                <img
+                  src="https://randomuser.me/api/portraits/women/46.jpg"
+                  alt="ユーザー"
+                  class="user-image"
+                />
+                <div class="user-details">
+                  <h4 class="username">宮原 美耶</h4>
+                  <p class="role">マーケティング</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- お問い合わせセクション -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <h2>お問い合わせ</h2>
+          <p>ご質問やご相談がございましたら、お気軽にお問い合わせください。</p>
+          <div class="contact-info">
+            <p>📧 info@example.com</p>
+            <p>📞 03-1234-5678</p>
+            <p>📍 東京都渋谷区○○○○</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2024 会社名. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

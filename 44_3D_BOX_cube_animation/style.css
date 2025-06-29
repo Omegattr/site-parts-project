@@ -38,11 +38,11 @@ body {
 	position: absolute;
 	width: 1000px;
 	z-index: 2;
-	animation: 200s linear infinite blur;
+	animation: 10s linear infinite blur;
 }
 .content {
 	border-radius: 40px;
-	animation: 200s linear infinite brightness;
+	animation: 10s linear infinite brightness;
 }
 .container {
 	justify-content: center;
@@ -56,8 +56,8 @@ body {
 .container-full {
 	margin: 0;
 	justify-content: center;
-	transform: scale(1);
-	animation: 200s linear infinite zoom-in;
+	transform: scale(2.5);
+	animation: 10s linear infinite zoom-out;
 }
 .cube,
 .face {
@@ -192,12 +192,12 @@ span {
 		filter: hue-rotate(100deg);
 	}
 }
-@keyframes zoom-in {
+@keyframes zoom-out {
 	0% {
-		transform: scale(1);
+		transform: scale(2.5);
 	}
 	100% {
-		transform: scale(2.5);
+		transform: scale(1);
 	}
 }
 @keyframes blur {

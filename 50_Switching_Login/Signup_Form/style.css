@@ -107,6 +107,18 @@ form{ width: 100%; }
     font-size: 16px;
     color: #fff;
     font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background: #5a7bd8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(116, 148, 236, 0.4);
+}
+
+.btn:active{
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(116, 148, 236, 0.3);
 }
 
 .social-icons{
@@ -122,6 +134,18 @@ form{ width: 100%; }
         font-size: 24px;
         color: #333;
         margin: 0 8px;
+        transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover{
+        border-color: #7494ec;
+        color: #7494ec;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(116, 148, 236, 0.3);
+    }
+
+    .social-icons a:active{
+        transform: translateY(-1px);
     }
 
 .toggle-box{
@@ -137,7 +161,6 @@ form{ width: 100%; }
         width: 300%;
         height: 100%;
         background: #7494ec;
-        /* border: 2px solid red; */
         border-radius: 150px;
         z-index: 2;
         transition: 1.8s ease-in-out;
@@ -149,7 +172,6 @@ form{ width: 100%; }
     position: absolute;
     width: 50%;
     height: 100%;
-    /* background: seagreen; */
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -185,6 +207,17 @@ form{ width: 100%; }
         background: transparent;
         border: 2px solid #fff;
         box-shadow: none;
+        transition: all 0.3s ease;
+    }
+
+    .toggle-panel .btn:hover{
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .toggle-panel .btn:active{
+        transform: translateY(0);
     }
 
 @media screen and (max-width: 650px){

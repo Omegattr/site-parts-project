@@ -84,6 +84,20 @@ button {
   background-color: #223941;
 }
 
+/* 背景色クラス */
+.bg-game-one {
+  background-color: #1d1815;
+}
+.bg-game-two {
+  background-color: #405260;
+}
+.bg-game-three {
+  background-color: #73a91d;
+}
+.bg-game-four {
+  background-color: #223941;
+}
+
 .img {
   width: 100%;
   height: 100%;

@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+/* 基本スタイル */
+body{
+    margin: 0px;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+    background:#22212c;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* 背景パターン */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 浮遊する装飾要素 */
+body::after {
+    content: '';
+    position: fixed;
+    top: 20%;
+    right: 10%;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 左側の浮遊する装飾要素 */
+.container::before {
+    content: '';
+    position: fixed;
+    bottom: 20%;
+    left: 10%;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    border-radius: 50%;
+    animation: float-left 8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
+
+@keyframes float-left {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(-180deg);
+    }
+}
+/* メインコンテナ */
+.container{
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    margin: 0px auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+/* 内部コンテナ */
+.inner_container{
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    padding: 15px;
+    border:2px solid #EAEAE9;
+    border-radius: 25px;
+    box-sizing: border-box;
+    background:#fff;
+}
+/* 切り替えボタンコンテナ */
+.btn{
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+    background: #F4F3F8;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+}
+/* アクティブな背景 */
+.active_bg {
+    position: absolute;
+    height: calc(100% - 12px);
+    background: #fff;
+    border-radius: 25px;
+    transition: all .3s linear;
+    width: calc(50% - 6px);
+}
+/* 料金プランボタン */
+.pricing_btn{
+    position: relative;
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 17px;
+    box-sizing: border-box;
+    font-weight: 600;
+    transition: all .3s linear;
+    text-align: center;
+    max-width: 50%;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* 料金プラン表示エリア */
+.pricing{
+    position: relative;
+    margin-top: 20px;
+    display: none;
+}
+.pricing.active{
+    display: block;
+}
+/* 支払いプラン */
+.payment{
+    position: relative;
+    padding: 15px;
+    border: 2px solid #F3F3F2;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+.payment.active{
+    border:2px solid #000;
+}
+/* プラン名 */
+.free h2{
+    position: relative;
+    margin: 0px;
+    margin-bottom: 3px;
+    font-weight: 500;
+    font-size: 20px;
+}
+h2 span{
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    background: #F2EBB9;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-weight: normal;
+}
+/* 料金表示 */
+.money{
+    position: relative;
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+}
+.money span{
+    position: relative;
+    display: inline-block;
+    font-weight: normal;
+    color: #838388;
+}
+/* 年額プランの詳細情報 */
+.yearly-details{
+    position: relative;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.monthly-equivalent{
+    position: relative;
+    display: block;
+    font-size: 14px;
+    color: #666;
+    font-weight: 400;
+}
+.discount-rate{
+    position: relative;
+    display: block;
+    font-size: 14px;
+    color: #28a745;
+    font-weight: 600;
+}
+/* 選択アイコン */
+.select_icon{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border:2px solid #838388;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.select_icon.active{
+    background: #000;
+    border:2px solid #000;
+
+}
+/* チェックマーク（左側） */
+.select_icon.active::after{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 6px;
+    background: #fff;
+    transform: rotate(130deg);
+    left: 5px;
+    top: 10px;
+}
+/* チェックマーク（右側） */
+.select_icon.active::before{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 13px;
+    background: #fff;
+    transform: rotate(43deg);
+    left: 11px;
+    top: 4px;
+}
+/* アクションボタン */
+.action_btn{
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: 0;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+.action_btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.action_btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.action_btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.action_btn:hover::before {
+    left: 100%;
+}
+
+/* レスポンシブデザイン */
+@media(max-width:768px){
+    .container{
+        max-width: 90%;
+    }
+}

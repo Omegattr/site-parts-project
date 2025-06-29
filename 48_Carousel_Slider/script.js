@@ -1,5 +1,5 @@
 /*
-inspiration
+インスピレーション
 https://cz.pinterest.com/pin/830703093792161391/
 */
 var swiper = new Swiper(".swiper", {
