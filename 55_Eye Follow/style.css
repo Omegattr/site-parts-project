@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Arial', sans-serif;
+}
+
+.emoji-face {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  background: linear-gradient(145deg, #ffd700, #ffed4e);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.1),
+    inset 0 -10px 20px rgba(255,255,255,0.3),
+    inset 0 10px 20px rgba(0,0,0,0.1);
+  border: 4px solid #fff;
+}
+
+.emoji-face:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 25px 50px rgba(0,0,0,0.15),
+    inset 0 -10px 20px rgba(255,255,255,0.4),
+    inset 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.emoji-face::before {
+  content: "";
+  top: 200px;
+  position: absolute;
+  width: 120px;
+  height: 60px;
+  background: linear-gradient(145deg, #ff6b6b, #ee5a52);
+  border-radius: 0 0 60px 60px;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 -5px 10px rgba(0,0,0,0.2);
+}
+
+.emoji-face:hover::before {
+  width: 140px;
+  height: 70px;
+  border-radius: 0 0 70px 70px;
+}
+
+.eyes {
+  position: relative;
+  top: -50px;
+  display: flex;
+  gap: 20px;
+}
+
+.eyes .eye {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: block;
+  background: linear-gradient(145deg, #fff, #f0f0f0);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 
+    inset 0 -5px 15px rgba(0,0,0,0.1),
+    0 5px 15px rgba(0,0,0,0.1);
+  border: 3px solid #fff;
+}
+
+.eyes .eye::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #2c3e50, #34495e);
+  transition: all 0.3s ease;
+  box-shadow: inset 0 -3px 8px rgba(0,0,0,0.3);
+}
+
+.eyes .eye::after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 20px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.8;
+}
+
+.tongue {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  width: 60px;
+  height: 80px;
+  background: linear-gradient(145deg, #ff69b4, #ff1493);
+  border-radius: 30px 30px 40px 40px;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  opacity: 0;
+  box-shadow: inset 0 -10px 20px rgba(0,0,0,0.2);
+  z-index: -1;
+}
+
+.tongue::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 50px;
+  background: linear-gradient(145deg, #ff69b4, #ff1493);
+  border-radius: 20px 20px 30px 30px;
+  box-shadow: inset 0 -5px 10px rgba(0,0,0,0.2);
+}
+
+.emoji-face:hover .tongue {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+  z-index: 10;
+}

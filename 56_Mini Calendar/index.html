@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Calendar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="demo-container">
+      <h1 class="site-title">Mini Calendar</h1>
+      <div class="calendar-wrapper">
+        <button id="prev-day" class="calendar-arrow">&lt;</button>
+        <div class="calendar">
+          <span id="today-label" class="today-label" style="display:none;">today</span>
+          <p class="year" id="year">2021</p>
+          <p class="month" id="month">April</p>
+          <p class="day-number" id="day-number">12</p>
+          <p class="day" id="day">Sunday</p>
+        </div>
+        <button id="next-day" class="calendar-arrow">&gt;</button>
+      </div>
+      <p class="description">このミニカレンダーは、今日の日付を自動的に表示するシンプルなウィジェットです。<br>Webサイトやダッシュボードなどに簡単に組み込めます。</p>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: cyan;
+}
+
+.demo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.site-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #003366;
+  letter-spacing: 0.1em;
+  text-shadow: 1px 1px 4px #fff;
+}
+
+.description {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  color: #333;
+  background: rgba(255,255,255,0.7);
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.calendar {
+  background-color: white;
+  width: 40%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+
+.month {
+  margin: 0;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.day {
+  font-size: 20px;
+  color: darkgray;
+}
+
+.day-number {
+  font-size: 80px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.year {
+  margin: 20px 0;
+  font-size: 20px;
+  color: darkgray;
+  font-weight: 500;
+}
+
+.month:hover,
+.day:hover,
+.day-number:hover,
+.year:hover {
+  animation: bounce 0.5s;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-18px); }
+  50%  { transform: translateY(0); }
+  70%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.calendar-buttons {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+.calendar-buttons button {
+  padding: 8px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #eee;
+  color: #333;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.calendar-buttons button:hover {
+  background: #00bcd4;
+  color: #fff;
+}
+
+.calendar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+}
+.calendar-arrow {
+  background: #eee;
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+  user-select: none;
+}
+.calendar-arrow:hover {
+  background: #00bcd4;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.today-label {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 2px 10px;
+  font-size: 0.95rem;
+  color: #fff;
+  background: #00bcd4;
+  border-radius: 12px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  z-index: 2;
+}
+
+.month,
+.day,
+.day-number,
+.year {
+  font-size: 2rem;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.day-number {
+  font-weight: bold;
+  margin: 0;
+}
+
+.day-number.date-move {
+  animation: day-move-zoom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes day-move-zoom {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.3); }
+  60% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+.day-number.slide-in-right {
+  animation: slide-in-right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.day-number.slide-in-left {
+  animation: slide-in-left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slide-in-right {
+  0% { opacity: 0; transform: translateX(-40px) scale(0.9); }
+  60% { opacity: 1; transform: translateX(8px) scale(1.05); }
+  80% { transform: translateX(-2px) scale(1); }
+  100% { opacity: 1; transform: translateX(0) scale(1); }
+}
+@keyframes slide-in-left {
+  0% { opacity: 0; transform: translateX(40px) scale(0.9); }
+  60% { opacity: 1; transform: translateX(-8px) scale(1.05); }
+  80% { transform: translateX(2px) scale(1); }
+  100% { opacity: 1; transform: translateX(0) scale(1); }
+}

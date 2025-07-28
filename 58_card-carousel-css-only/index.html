@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Card Carousel - 次世代UI体験</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- ローディングオーバーレイ -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- ヘッダー -->
+    <header class="header">
+        <h1>3D カードカルーセル</h1>
+        <p>次世代のユーザーインターフェース体験を提供する、インタラクティブな3Dカルーセルコンポーネント</p>
+    </header>
+
+    <!-- コントロールパネル -->
+    <div class="control-panel">
+        <button class="control-btn" id="playPauseBtn">⏸️ 一時停止</button>
+        <button class="control-btn" id="speedBtn">⚡ 速度変更</button>
+        <button class="control-btn" id="resetBtn">🔄 リセット</button>
+    </div>
+
+    <!-- カルーセルコンテナ -->
+    <div class="carousel-container">
+        <div class="carousel" id="carousel">
+            <!-- カード1 -->
+            <div class="card c1">
+                <div class="img" style="background: linear-gradient(45deg, #667eea, #764ba2), url('https://picsum.photos/300/200?random=1')"></div>
+                <p>Webデザイン</p>
+                <span>モダンで魅力的なウェブサイトデザインの作成</span>
+            </div>
+            <div class="cardb cb1"></div>
+
+            <!-- カード2 -->
+            <div class="card c2">
+                <div class="img" style="background: linear-gradient(45deg, #f093fb, #f5576c), url('https://picsum.photos/300/200?random=2')"></div>
+                <p>モバイルアプリ</p>
+                <span>ユーザーフレンドリーなモバイルアプリケーション</span>
+            </div>
+            <div class="cardb cb2"></div>
+
+            <!-- カード3 -->
+            <div class="card c3">
+                <div class="img" style="background: linear-gradient(45deg, #4facfe, #00f2fe), url('https://picsum.photos/300/200?random=3')"></div>
+                <p>UI/UXデザイン</p>
+                <span>直感的で使いやすいインターフェース設計</span>
+            </div>
+            <div class="cardb cb3"></div>
+
+            <!-- カード4 -->
+            <div class="card c4">
+                <div class="img" style="background: linear-gradient(45deg, #43e97b, #38f9d7), url('https://picsum.photos/300/200?random=4')"></div>
+                <p>ブランディング</p>
+                <span>企業アイデンティティとビジュアルブランディング</span>
+            </div>
+            <div class="cardb cb4"></div>
+
+            <!-- カード5 -->
+            <div class="card c5">
+                <div class="img" style="background: linear-gradient(45deg, #fa709a, #fee140), url('https://picsum.photos/300/200?random=5')"></div>
+                <p>イラストレーション</p>
+                <span>カスタムイラストレーションとグラフィック</span>
+            </div>
+            <div class="cardb cb5"></div>
+
+            <!-- カード6 -->
+            <div class="card c6">
+                <div class="img" style="background: linear-gradient(45deg, #a8edea, #fed6e3), url('https://picsum.photos/300/200?random=6')"></div>
+                <p>アニメーション</p>
+                <span>魅力的なモーションデザインとアニメーション</span>
+            </div>
+            <div class="cardb cb6"></div>
+
+            <!-- カード7 -->
+            <div class="card c7">
+                <div class="img" style="background: linear-gradient(45deg, #ffecd2, #fcb69f), url('https://picsum.photos/300/200?random=7')"></div>
+                <p>プロトタイプ</p>
+                <span>インタラクティブプロトタイプの作成と検証</span>
+            </div>
+            <div class="cardb cb7"></div>
+
+            <!-- カード8 -->
+            <div class="card c8">
+                <div class="img" style="background: linear-gradient(45deg, #a18cd1, #fbc2eb), url('https://picsum.photos/300/200?random=8')"></div>
+                <p>戦略・企画</p>
+                <span>デザイン戦略とプロジェクト企画の立案</span>
+            </div>
+            <div class="cardb cb8"></div>
+        </div>
+    </div>
+
+    <!-- 機能説明セクション -->
+    <section class="features">
+        <h2>3Dカルーセルの優位性</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-title">視覚的インパクト</div>
+                <div class="feature-desc">
+                    3D空間での回転により、従来の平面カルーセルでは実現できない圧倒的な視覚的インパクトを提供します。ユーザーの注意を引きつけ、記憶に残る体験を作り出します。
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <div class="feature-title">直感的な操作性</div>
+                <div class="feature-desc">
+                    回転の一時停止、速度調整、リセット機能により、ユーザーが自分のペースでコンテンツを閲覧できます。操作性の向上により、ユーザビリティが大幅に改善されます。
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <div class="feature-title">高度な視覚効果</div>
+                <div class="feature-desc">
+                    リフレクション効果、グラデーション、ホバーアニメーションにより、プロフェッショナルで洗練された印象を与えます。ブランド価値の向上に貢献します。
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <div class="feature-title">レスポンシブ対応</div>
+                <div class="feature-desc">
+                    モバイルデバイスから大画面まで、あらゆるスクリーンサイズに最適化されています。デバイスを問わず一貫した体験を提供します。
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">パフォーマンス最適化</div>
+                <div class="feature-desc">
+                    CSS3とハードウェアアクセラレーションを活用し、滑らかなアニメーションを軽量に実現。パフォーマンスを犠牲にすることなく、高品質な体験を提供します。
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-title">カスタマイズ性</div>
+                <div class="feature-desc">
+                    色彩、アニメーション速度、カードサイズなど、様々な要素をプロジェクトに合わせてカスタマイズ可能。ブランドアイデンティティに完全に適合させることができます。
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
